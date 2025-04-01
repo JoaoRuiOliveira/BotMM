@@ -35,7 +35,7 @@ async def reload(ctx, cog: str):
 @bot.command(name='sync')
 async def sync(ctx, cog: str):
     try:
-        synced = await bot.tree.sync()  # Sync globally
+        synced = await bot.tree.sync()
         print(f"Synced {len(synced)} command(s)")
     except Exception as e:
         print(f"Failed to sync commands: {e}")
